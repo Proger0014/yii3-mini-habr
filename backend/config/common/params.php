@@ -5,6 +5,7 @@ declare(strict_types=1);
 use App\Shared\ApplicationParams;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetManager;
+use Yiisoft\Db\Mysql\Dsn;
 use Yiisoft\Definitions\Reference;
 use Yiisoft\Router\CurrentRoute;
 use Yiisoft\Router\UrlGeneratorInterface;
@@ -33,4 +34,15 @@ return [
             Reference::to(CsrfViewInjection::class),
         ],
     ],
+
+    'yiisoft/db-mysql' => [
+        'dsn' => new Dsn('mysql', 'db', 'dev-db', '3306'),
+        'username' => 'root',
+        'password' => 'root',
+    ],
+
+    'yiisoft/db-migration' => [
+        'newMigrationNamespace' => "App\\Migrations",
+        'sourceNamespaces' => ["App\\Migrations"],
+    ]
 ];

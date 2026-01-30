@@ -17,7 +17,7 @@ RUN install-php-extensions \
     xml \
     xmlwriter \
     simplexml \
-    pdo
+    pdo_mysql
 
 #
 # Development
