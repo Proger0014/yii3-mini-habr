@@ -10,7 +10,7 @@ return [
                 $params['yiisoft/db-mysql']['dsn'],
                 $params['yiisoft/db-mysql']['username'],
                 $params['yiisoft/db-mysql']['password'],
-            )
-        ]
-    ]
+            ),
+        ],
+    ],
 ];
